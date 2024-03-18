@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="W2 Election Preference Summary" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/sample}">
+               <HBox>
+                    <Label design="Bold" text="The benefits of receiving an electronic W-2 statement are: " />
+                </HBox>
+                <Label text="" />
+                <HBox>
+                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                    <Label text="Earlier access"/>
+                </HBox>
+                <HBox>
+                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                    <Label text="Once received electronically, significantly less possibility that the W-2 may be lost or stolen" />
+                </HBox>
+                <HBox>
+                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                    <Label text="Access is possible electronically if  the Team Member is away from his/her usual home or work location" />
+                </HBox>
+                <HBox>
+                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                    <Label text="Compensation an tax withholding information may easily be downloaded into many tax preparation software programs" />
+                </HBox>
+                <Label text="" />
+                <HBox>
+                    <Link class="textRed sapUiSmallMarginEnd"  text="Disclosure Information" target="_blank" href="http://www.sap.com" />
+                </HBox>
+            </VBox>
+        </content>
+    </Panel>
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/sample}">
+                <Label text="Please view or change your W2 delivery preference below." />
+                <HBox class="" alignItems="Center">
+                    <Select id='idDeliverySelect' width="500px">
+                        <core:Item key="04" text="Paper Delivery" />
+                        <core:Item key="02" text="Mexico" />
+                        <core:Item key="03" text="Norway" />
+                        <core:Item key="01" text="New Zealand" />
+                        <core:Item key="05" text="Netherlands" />
+                    </Select>
+                </HBox>
+            </VBox>
+            <FlexBox height="100px" alignItems="Start" justifyContent="End">
+                <!-- <Button text="SelectItem" width="100px" class="sapUiSmallMargin" press=".onSelectItem"/> -->
+                <Button text="Save" width="100px" class="sapUiSmallMargin" icon="sap-icon://save" press=".onSave"/>
+            </FlexBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

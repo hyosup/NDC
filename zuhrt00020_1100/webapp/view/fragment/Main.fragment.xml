@@ -1,0 +1,86 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+             <HBox>
+                <Title level="H3" text="Work schedule rule" class="sapUiSmallMarginEnd" />
+             </HBox>
+             <grid:CSSGrid class="grid-form " gridTemplateColumns="1fr 2fr" gridGap="1px 0px">
+                    <HBox class="grid-item label-box" alignItems="Center">
+                        <Label text="WS Rule" />
+                    </HBox>
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="{Badge}" />
+                    </HBox>
+            </grid:CSSGrid>
+            <Label text="" />
+            <VBox>
+                <Title level="H3" text="Attendance recodrs" class="sapUiSmallMarginEnd" />
+                <Label text="" />
+                <Title level="H3" text="Please see your supervisor if you need assistance with your attendance data." class="sapUiSmallMarginEnd" />
+             </VBox>
+            <VBox binding="{/sample}">
+                <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr 1fr 1fr" gridGap="1px 0px">
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="Start Date : " />
+                        <DatePicker dateValue="{Begda}" displayFormat="yyyy-MM-dd" class="sapUiTinyMarginBegin" />
+                    </HBox>
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="End Date : " />
+                        <DatePicker dateValue="{Endda}" displayFormat="yyyy-MM-dd" class="sapUiTinyMarginBegin" />
+                    </HBox>
+                    <HBox class="grid-item contents-box last" alignItems="Center">
+                        <Button text="Update" icon="sap-icon://synchronize" />
+                    </HBox>
+                </grid:CSSGrid>
+                <Label text="" />
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                        <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Start date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="End date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="15%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Att.type" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{CheckVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Description" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Att.Hours" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

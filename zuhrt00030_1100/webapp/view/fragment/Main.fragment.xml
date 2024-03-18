@@ -1,0 +1,110 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+             <HBox>
+                <Title level="H3" text="OCCURRENCE DATA" class="sapUiSmallMarginEnd" />
+             </HBox>
+             <table:Table selectionMode="None" visibleRowCount="{list2Info/rowCount}" rows="{list2}" binding="{/sample}">
+                    <table:columns>
+                        <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Occurence Type" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{occurenceType}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Total Occurrences in Date Range" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <!-- <Text class="{class}" text="{occurenceTotal}" width="100%" textAlign="Center" /> -->
+                                <Text text="{occurenceTotal}"  width="100%" textAlign="Center">
+                                    <customData>
+                                        <core:CustomData key="colour" value="{occurenceTotal}" writeToDom="true" textAlign="Center" />
+                                    </customData>
+                                </Text>
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            <Label text="" />
+            <VBox>
+                <Title level="H3" text="Occurrence Recodrs" class="sapUiSmallMarginEnd" />
+                <Label text="" />
+             </VBox>
+            <VBox binding="{/sample}">
+                <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr 1fr 1fr" gridGap="1px 0px">
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="Start Date : " />
+                        <DatePicker dateValue="{Begda}" displayFormat="yyyy-MM-dd" class="sapUiTinyMarginBegin" />
+                    </HBox>
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="End Date : " />
+                        <DatePicker dateValue="{Endda}" displayFormat="yyyy-MM-dd" class="sapUiTinyMarginBegin" />
+                    </HBox>
+                    <HBox class="grid-item contents-box last" alignItems="Center">
+                        <Button text="Update" icon="sap-icon://synchronize" />
+                    </HBox>
+                </grid:CSSGrid>
+                <Label text="" />
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                        <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Start date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                         <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Description" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="15%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Abs.Hours" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{CheckVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="HAIC" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Attendance Incentive" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Attendance Unexcused" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

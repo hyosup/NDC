@@ -1,0 +1,26 @@
+<!-- <mvc:View controllerName="com.hmmausa.myhmma.myinfo.zuhrt000101100.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+    </App>
+</mvc:View> -->
+
+
+
+<mvc:View controllerName="com.hmmausa.myhmma.myinfo.zuhrt000101100.controller.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <core:Fragment fragmentName="com.hmmausa.myhmma.myinfo.zuhrt000101100.view.fragment.Main" type="XML" />
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

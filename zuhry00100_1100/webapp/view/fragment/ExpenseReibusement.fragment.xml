@@ -1,0 +1,96 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/sample}">
+                <Label text='Period' labelFor="DP10"/>
+				<DatePicker width="300px"
+					value="{
+						'path': '/valueDP10',
+						'type': 'sap.ui.model.type.Date',
+						'formatOptions': {
+							'pattern': 'MM-y'
+						}
+					}"
+					change="handleChange"
+					class="sapUiSmallMarginBottom"/>
+                
+                <HBox class="grid-item contents-box" alignItems="Center"></HBox>
+                <!-- <HBox class="sapUiLargeMarginTop">
+                    <Label text="W2 History" />
+                </HBox> -->
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                         <table:Column width="10%" filterProperty="Relation" 
+                            headerSpan="3"
+                            sortProperty="Relation">
+                           	<table:multiLabels>
+                                <Label text="Payment Doc" textAlign="Center" width="100%"/>
+                                <Label text="Doc ID" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="15%" filterProperty="Idx" sortProperty="Idx">
+                            <table:multiLabels>
+                                <Label text="Payment Doc" textAlign="Center" width="100%"/>
+                                <Label text="Date" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                        <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM-dd-yyyy' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:multiLabels>
+                                <Label text="Payment Doc" textAlign="Center" width="100%"/>
+                                <Label text="Amount" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                            <table:template>
+                                <Text text="2022" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" 
+                            headerSpan="2"
+                            sortProperty="Relation">
+                           	<table:multiLabels>
+                                <Label text="Original Doc" textAlign="Center" width="100%"/>
+                                <Label text="Doc ID" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" filterProperty="Relation" sortProperty="Relation">
+                            <table:multiLabels>
+                                <Label text="Original Doc" textAlign="Center" width="100%"/>
+                                <Label text="Details" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                            <table:template>
+                                <Text text="{LocationVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                    <table:footer>
+                        <HBox>
+                            <Label text="[Payment Doc] Amount Total :" textAlign="start" width="100%"/>
+                            <Label text="400" textAlign="Center" width="100%"/>
+                        </HBox> 
+                    </table:footer>
+                    
+                    <!-- <table:footer>
+                        <HBox>
+                            <Label text="Total:" textAlign="start" width="100%"/>
+                            <Label text="300" textAlign="Center" width="100%"/>
+                        </HBox>
+                    </table:footer> -->
+                    
+                </table:Table>
+                <Label text="" textAlign="start" width="100%"/>
+                <Label design="Bold" text="Please contact Treasury if you have any concerns on ther reimbursement." textAlign="start" width="100%"/>
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

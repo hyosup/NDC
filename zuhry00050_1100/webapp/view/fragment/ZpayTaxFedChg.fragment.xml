@@ -1,0 +1,139 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Dialog binding="{/main}" title="{Ename} {i18n>FEDERAL (CHANGE REQUEST)}" resizable="true" draggable="true" contentWidth="1700px">
+        <content>
+            <!-- <Panel headerText="W4 – Federal Tax Change" class="sapUiSmallMarginTop">
+                <headerToolbar>
+                    <Toolbar height="1rem">
+                        <Title text="MY Pay allows you to access your individual Pay Statement, Tax Data, and Bank Information"/>
+                        
+                    </Toolbar>
+                </headerToolbar>
+            </Panel> -->
+            <Panel headerText="Status" class="sapUiSmallMarginTop">
+                <headerToolbar>
+                    <Toolbar height="3rem">
+                        <VBox>
+                            <HBox>
+                                <Title text="A4 – State Tax Change" level="H3" titleStyle="H3"/> 
+                                <Title text="*please allow up to 7 days for tax changes to take effect." level="H5" titleStyle="H5" class="textRed"/>
+                            </HBox>
+                            <Title text="Status"/>
+                        </VBox>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <VBox >
+                        <grid:CSSGrid class="grid-form" gridTemplateColumns="3fr 1fr" gridGap="0px 0px">
+                            <HBox class="grid-item label-box" alignItems="Center">
+                                <Label design="Bold" class="sapUiSmallMarginEnd" text="Marital Status " />
+                            </HBox>
+                            <HBox class="grid-item contents-box" alignItems="Center">
+                                 <Select>
+                                    <core:Item key="GR" text=" Married Filing Joint Return (Married)" />
+                                    <core:Item key="MX" text="Mexico" />
+                                    <core:Item key="NO" text="Norway" />
+                                    <core:Item key="NZ" text="New Zealand" />
+                                    <core:Item key="NL" text="Netherlands" />
+                                </Select>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                <VBox>
+                                    <Label design="Bold"  text="Number of dependents (other than spouse) that you will provide more than on-half of ther support for during thre year." />
+                                    <Label class="textRed sapUiSmallMarginEnd" text="HMMA will verify all exemption claims greater than 7 thruough the Alabama Dept of Revenue Withholding Tax Section per state law." />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                               <VBox binding="{/sample}">
+                                    <Select>
+                                        <core:Item key="01" text="01" />
+                                        <core:Item key="02" text="02" />
+                                        <core:Item key="03" text="03" />
+                                        <core:Item key="04" text="04" />
+                                        <core:Item key="05" text="05" />
+                                        <core:Item key="06" text="06" />
+                                        <core:Item key="07" text="07" />
+                                    </Select>
+                                    <CheckBox text="By checking this box Ihave read and confirm my exemption claim." />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                 <VBox>
+                                    <Label design="Bold"  text="Additional Amount, if any, you want deducted each pay period" />
+                                 </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <HBox>
+                                        <Input value="$" editable="false" width="60px"/><Input value="{ename}" width="200px"/>
+                                    </HBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <layoutData>
+                                    <grid:GridItemLayoutData  gridColumn="1 / 3"/>
+                                </layoutData>
+                                <VBox>
+                                    <Label design="Bold" text="Every employee, on or before the date of commencement of employment, shall furnish his or her employer with a signed Alabama withholding exemption certificate relating to the number of withholding exemptions which he or she claims, " />
+                                    <Label design="Bold" text="which in no event shall exceed the number to which the employees is entitled." />
+                                    <Label design="Bold" text="In the event the employee inflates the number of exemptions allowed by this Chapter on Form A4, the employee shall pay a penalty of five hundred dollars($500) for such action pursuant to Section 40-29-75." />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <layoutData>
+                                    <grid:GridItemLayoutData  gridColumn="1 / 3"/>
+                                </layoutData>
+                                <VBox>
+                                    <Label design="Bold" text="EDEPENDENT: To qualify as your dependent a person must receive more than on-half of his or her support from you for the year and must be related to you as follows: " />
+                                    <Label design="Bold" text="Your father, mother, grandparent, stepfather, stepmother, father-in-law or mother-in-law;." />
+                                    <Label design="Bold" text="Your son or daughter (including legally adopted children), grandchild, stepson, stepdaughter, son-in-law, or daughter-in-law;" />
+                                    <Label design="Bold" text="Your brother, sister, stepbrother, stepsister, half-brother, half-sister, brother-in-law, or sister-in-law;" />
+                                    <Label design="Bold" text="Your uncle, aunt, nephew, or niece(but only if related by blood)." />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <layoutData>
+                                    <grid:GridItemLayoutData  gridColumn="1 / 3"/>
+                                </layoutData>
+                                <VBox>
+                                    <Label design="Bold" text="EDEPENDENT: To qualify as your dependent a person must receive more than on-half of his or her support from you for the year and must be related to you as follows: " />
+                                    <Label design="Bold" text="Your father, mother, grandparent, stepfather, stepmother, father-in-law or mother-in-law;." />
+                                    <Label design="Bold" text="Your son or daughter (including legally adopted children), grandchild, stepson, stepdaughter, son-in-law, or daughter-in-law;" />
+                                    <Label design="Bold" text="Your brother, sister, stepbrother, stepsister, half-brother, half-sister, brother-in-law, or sister-in-law;" />
+                                    <Label design="Bold" text="Your uncle, aunt, nephew, or niece(but only if related by blood)." />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <layoutData>
+                                    <grid:GridItemLayoutData  gridColumn="1 / 3"/>
+                                </layoutData>
+                                <VBox>
+                                    <Link class="sapUiSmallMarginEnd"  text="Alabama Withholding Tax Exemption Certificate" target="_blank" href="http://www.sap.com" />
+                                     <HBox>
+                                        <Label class="sapUiSmallMarginEnd"  design="Bold" text="For More Information, go to" /><Link class="sapUiSmallMarginEnd"  text="www.revenue.alabama.gov" target="_blank" href="http://www.revenue.alabama.gov" />
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                <Label text="" />
+                                <VBox>
+                                    <Label design="Bold"  text="Under penalties of perjury, I declare that I have examined this certificate and, to the best of my knowledge and belief, it is true, correct and complete, " />
+                                    <Label design="Bold"  text="I understand that by entering my password, I have legally signed this form." />
+                                </VBox>
+                            </HBox>
+                             <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <Input type="Password" placeholder="Enter Your MyHMMA Password" width="260px" fieldWidth="260px" editable="true"/>
+                            </HBox>
+                           
+                        </grid:CSSGrid>
+                    </VBox>
+                </content>
+            </Panel>
+            
+        </content>
+        <buttons>
+            <Button text="{i18n>cancel}" press=".onPressCloseDialog" icon="sap-icon://cancel"/>
+            <Button text="{i18n>save}" press=".onPressCloseDialog"  icon="sap-icon://save"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

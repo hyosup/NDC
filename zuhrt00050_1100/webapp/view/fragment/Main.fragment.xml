@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="Pay Statement" class="sapUiSmallMarginTop">
+        <content>
+            <VBox>
+                <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr " gridGap="1px 0px">
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="Pay Date : " />
+                        <DatePicker dateValue="{/Begda}" displayFormat="yyyy" class="sapUiTinyMarginBegin" />
+                         <Button text="Display"  icon="sap-icon://display" press=".onPressWindow" />
+                    </HBox>
+                </grid:CSSGrid>
+                 <Label text="" />
+                <HBox class="">
+                    <Label text="You may print your certificate now by selecting the desired date above, click display and then print." />
+                </HBox>
+              
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

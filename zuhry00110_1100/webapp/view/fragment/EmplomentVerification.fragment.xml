@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+            <FlexBox height="100px" alignItems="Start" justifyContent="Center">
+                <Image src="img/HMMA_Blue_Letters_plus_words.jpg" width="400px" />
+            </FlexBox>
+        </content>
+    </Panel>
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+            <FlexBox  alignItems="Start" justifyContent="Center">
+                <VBox>
+                    <HBox alignItems="Center">
+                        <Label  design="Bold" class="sapUiSmallMarginEnd" text="View or emaili your basic verification of employment letter below. if you require more detailed information, viist" />
+                        <Link  design="Bold" class="sapUiSmallMarginEnd" text="www.theworknumber.com" href="http://www.sap.com"  target="_blank"/>
+                        <Label  design="Bold" class="sapUiSmallMarginEnd" text=" call 800-367-5690 M-F 7:00 am to 7:00 pm (CT)" />
+                    </HBox>
+                </VBox>
+            </FlexBox>
+            <Label  design="Bold" class="sapUiSmallMarginEnd" text="" />
+            <FlexBox  alignItems="Start" justifyContent="Center">
+                <VBox>
+                    <FlexBox  justifyContent="Center">
+                        <HBox alignItems="Center">
+                                <Label  design="Bold" class="sapUiSmallMarginEnd" text="Please review" level="H5"/>
+                                <Link  design="Bold" class="sapUiSmallMarginEnd" text="Team Advisor Vol 36-20 Expanded Automated Employment Verification" 	target="_blank"  href="http://www.sap.com"/>
+                                <Label  design="Bold" class="sapUiSmallMarginEnd" text=" for more information." />
+                        </HBox>
+                    </FlexBox>
+                </VBox>
+            </FlexBox>
+        </content>
+    </Panel>
+    <Panel headerText="" class="sapUiSmallMarginTop">
+        <content>
+            <FlexBox height="100px" alignItems="Start" justifyContent="Center">
+                <Button text="View VOE Letter" width="200px" type="Emphasized" class="sapUiSmallMargin" icon="sap-icon://email" press=".onPressCloseDialog"/>
+                <Button text="Email VOE Letter" width="200px" type="Emphasized" class="sapUiSmallMargin" icon="sap-icon://email" press=".onPressCloseDialog"/>
+            </FlexBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

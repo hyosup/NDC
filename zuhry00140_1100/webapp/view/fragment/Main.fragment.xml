@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/sample}">
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                        <table:Column width="70%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="HMMA Links" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Link text="{Title}" width="100%" textAlign="Left" target="_blank" href="http://www.sap.com" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

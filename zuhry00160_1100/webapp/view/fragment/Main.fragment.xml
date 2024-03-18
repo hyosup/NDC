@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+        <Panel headerText="Total Compensation Statement" class="sapUiSmallMarginTop">
+        <content>
+            <VBox>
+                <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr " gridGap="1px 0px">
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="Annual Statements : " />
+                        <DatePicker dateValue="{/Begda}" displayFormat="yyyy" class="sapUiTinyMarginBegin" />
+                        <Button text="Display " icon="sap-icon://display" press=".onSearch" />
+                    </HBox>
+                </grid:CSSGrid>
+                 <Label text="" />
+                <HBox class="">
+                    <VBox class="">
+                        <Label text="A Total Compensatio Statement gives an overview of pay and benefits received annually." />
+                        <Label text="Total Compensation statements will be added to MyHNNA during the 1st Quarter(January-March) for each proceeding year." />
+                        <Label text="Please take the time to review your statemnet, and refer to it as you plan for the future." />
+                        <Label text="Sincerely." />
+                        <Label text="Your Human Resource Department." />
+                    </VBox>
+                </HBox>
+              
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

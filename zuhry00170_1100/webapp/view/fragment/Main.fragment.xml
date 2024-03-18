@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="Existing FML Requests" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/sample}">
+                 <Label text="Please review existing FML Requests and their associated status below." width="100%" textAlign="Start" />
+                 <Label text="" width="100%" textAlign="Start" />
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                        <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Date/Time" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="15%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Check#" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{CheckVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Type" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Location" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{LocationVal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="15%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Amount" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ parts: ['AmountVal', '/Currency'], type: 'sap.ui.model.type.Currency', formatOptions: {currencyCode:false} }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+        </content>
+    </Panel>
+    <Panel>
+        <content>
+            <FlexBox  alignItems="Start" justifyContent="End">
+                <Button text="ADD"  class="sapUiSmallMargin" icon="sap-icon://edit"  press=".onAdd" />
+            </FlexBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

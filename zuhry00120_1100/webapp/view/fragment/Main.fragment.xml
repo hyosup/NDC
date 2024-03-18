@@ -1,0 +1,241 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns:core="sap.ui.core">
+        <Panel class="myBackgroundStyle">
+            <VBox>
+                <Title  level="H1"
+                    titleStyle="H1"
+                    text="My Benefit"
+                    class="sapUiMediumMarginTopBottom sapUiSmallMarginBegin"/>
+                 <Label text="My Benefit allows you to view your current Benefit allowances" wrapping="true" />   
+            <!-- <Title  level="H7"
+                titleStyle="H7"
+                text="My Benefit allows you to view your current Benefit allowances."
+                class="sapUiMediumMarginTopBottom sapUiSmallMarginBegin"/>     -->
+            </VBox>
+        </Panel>
+        <Panel id="panelCSSGrid" >
+            <!-- <headerToolbar>
+                <Toolbar height="1rem">
+                    <Title text="My Benefit allows you to view your current Benefit allowances."/>
+                </Toolbar>
+            </headerToolbar> -->
+            <grid:CSSGrid id="grid1">
+                <grid:customLayout>
+                    <grid:ResponsiveColumnLayout />
+                </grid:customLayout>
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox >
+                            <VBox class="label-box" >
+                                <Title titleStyle="H4" >
+                                    <Link text="Benefit Overview" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox>
+                            <Label class="sapUiSmallMargin" text="The Benefit OVerview will display all of your current Benefit elections." wrapping="true" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="26" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox >
+                            <VBox class="label-box">
+                                <Title titleStyle="H4" >
+                                    <Link text="Benefit OnLine" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox >                             
+                            <VBox class="sapUiSmallMargin">                             
+                                <HBox>
+                                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                                    <Label design="Bold" text="Hartford" wrapping="true" />
+                                </HBox>
+                                <HBox>
+                                    <Link text="Life Insurance" wrapping="true" class="sapUiSmallMarginEnd" />
+                                    <Label text="- Customer Service 855-396-7655" wrapping="true" />
+                                </HBox>
+                                <Label text="" wrapping="true" />
+                                <HBox>
+                                    <grid:CSSGrid id="grid2" width="367px">
+                                        <grid:customLayout>
+                                            <grid:ResponsiveColumnLayout />
+                                        </grid:customLayout>
+                                        <f:Card>
+                                            <f:layoutData>
+                                                <grid:ResponsiveColumnItemLayoutData columns="12" />
+                                            </f:layoutData>
+                                            <f:content>
+                                                <VBox class="sapUiSmallMargin">
+                                                    <Title titleStyle="H3"  >
+                                                        <Link  text="New Yourk Life" target="_blank" href="http://www.sap.com" />
+                                                    </Title>
+                                                    <HBox>
+                                                        <VBox>
+                                                            <Link text="FML and Shoort?Long-Term Disability" wrapping="true" class="sapUiSmallMarginEnd" />
+                                                            <Label text="- Customer Service 855-842-4462" wrapping="true" />
+                                                        </VBox>
+                                                    </HBox>
+                                                    <HBox>
+                                                        <Link text="FML-IFML Online Submission Form" wrapping="true" class="sapUiSmallMarginEnd" />
+                                                    </HBox>
+                                                    <HBox>
+                                                        <VBox>
+                                                            <Link text="hmmamedicalleave@hmmausa.com" wrapping="true" class="sapUiSmallMarginEnd" />
+                                                            <Label text="- E-Mail FML/IFML Personal Certification Form Here" wrapping="true" />
+                                                        </VBox>
+                                                    </HBox>
+                                                </VBox>
+                                            </f:content>
+                                        </f:Card>
+                                    </grid:CSSGrid>
+                                </HBox>
+                                <Label text="" wrapping="true" />
+                                <HBox>
+                                    <grid:CSSGrid id="grid3" width="367px">
+                                        <grid:customLayout>
+                                            <grid:ResponsiveColumnLayout />
+                                        </grid:customLayout>
+                                        <f:Card>
+                                            <f:layoutData>
+                                                <grid:ResponsiveColumnItemLayoutData columns="12" />
+                                            </f:layoutData>
+                                            <f:content>
+                                                <VBox class="sapUiSmallMargin">
+                                                    <Title titleStyle="H3"  >
+                                                        <Link  text="Fidelity 401K" target="_blank" href="http://www.sap.com" />
+                                                    </Title>
+                                                    <HBox>
+                                                        <VBox>
+                                                            <Link text="Loan Facts" wrapping="true" class="sapUiSmallMarginEnd" />
+                                                            <Label text="- Customer Service 800-835-5098" wrapping="true" />
+                                                        </VBox>
+                                                    </HBox>
+                                                    <Link design="Bold" text="Budget Calendar" wrapping="true" />
+                                                    <Link design="Bold" text="Personal Finance 101" wrapping="true" />
+                                                    <Link design="Bold" text="401K Workshop Signup" wrapping="true" />
+                                                </VBox>
+                                            </f:content>
+                                        </f:Card>
+                                    </grid:CSSGrid>
+                                </HBox>
+                                <Label text="" wrapping="true" />
+                                <HBox>
+                                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                                    <Label design="Bold" text="BlueCross BlueShield of AL" wrapping="true" />
+                                </HBox>                                
+                                <HBox>
+                                    <VBox>
+                                        <HBox>
+                                        <Link text="BCBSAL" wrapping="true" class="sapUiSmallMarginEnd" />
+                                        <Label text="- Customer Service 800-292-8868" wrapping="true" />
+                                        </HBox>
+                                    </VBox>
+                                </HBox>
+                                <Label text="" wrapping="true" />
+                                <HBox>
+                                    <core:Icon src="sap-icon://circle-task-2" class="sapUiSmallMarginEnd size1"></core:Icon>
+                                    <Label design="Bold" text="EyeMed" wrapping="true" />
+                                </HBox>
+                                <HBox>
+                                    <VBox>
+                                    <HBox>
+                                        <Link text="EyeMed Vision Car" wrapping="true" class="sapUiSmallMarginEnd" />
+                                        <Label text="- Customer Service 800-299-1358" wrapping="true" class="sapUiSmallMarginEnd"/>
+                                        </HBox>
+                                    </VBox>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox >
+                            <VBox class="label-box">
+                                    <Title titleStyle="H4">
+                                        <Link text="H List" target="_blank" href="http://www.sap.com" />
+                                    </Title>
+                                </VBox>
+                            <Label class="sapUiSmallMargin" text="The H List will display Companies that offer discounts to Hyundai Team Members." wrapping="true" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox >
+                            <VBox class="label-box">
+                                <Title titleStyle="H4" >
+                                    <Link text="Aflac" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox>
+                            <Label class="sapUiSmallMargin" text="Customer Service 800-992-3522 Local Office 334-657-2484" wrapping="true" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox>
+                            <VBox class="label-box">
+                                <Title titleStyle="H4">
+                                    <Link text="Link" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox>
+                            <Label class="sapUiSmallMargin" text="Helpful Links to external sites, such as EAP,Fidelity. BlueCross?blueShiedl, EyeMed and many others." wrapping="true" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox>
+                            <VBox class="label-box">
+                                <Title titleStyle="H4" >
+                                    <Link text="Total Compensation" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox>
+                            <Label class="sapUiSmallMargin" text="Total Compensation Will display an overview of pay and benefits received annually." wrapping="true" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                
+                <f:Card>
+                    <f:layoutData>
+                        <grid:ResponsiveColumnItemLayoutData columns="4" rows="4" />
+                    </f:layoutData>
+                    <f:content>
+                        <VBox >
+                            <VBox class=" label-box">
+                                <Title titleStyle="H4">
+                                    <Link text="Tutorial Assistance Program" target="_blank" href="http://www.sap.com" />
+                                </Title>
+                            </VBox>
+                            <Label class="sapUiSmallMargin" text="Proviedes easy access to HMMA's Tuition Assistance information and forms." wrapping="true" />
+                            
+                        </VBox>
+                    </f:content>
+                </f:Card>
+            </grid:CSSGrid>
+        </Panel>
+</core:FragmentDefinition>

@@ -1,0 +1,168 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Dialog binding="{/main}" title="{Ename} {i18n>FEDERAL (CHANGE REQUEST)}" resizable="true" draggable="true" contentWidth="1700px">
+        <content>
+            <!-- <Panel headerText="W4 – Federal Tax Change" class="sapUiSmallMarginTop">
+                <headerToolbar>
+                    <Toolbar height="1rem">
+                        <Title text="MY Pay allows you to access your individual Pay Statement, Tax Data, and Bank Information"/>
+                        
+                    </Toolbar>
+                </headerToolbar>
+            </Panel> -->
+            <Panel headerText="Status" class="sapUiSmallMarginTop">
+                <headerToolbar>
+                    <Toolbar height="3rem">
+                        <VBox>
+                            <HBox>
+                                <Title text="W4 – Federal Tax Change" level="H3" titleStyle="H3"/> 
+                                <Title  text="*please allow up to 7 days for tax changes to take effect." level="H5" titleStyle="H5" class="textRed"/>
+                            </HBox>
+                            <Title text="Status"/>
+                        </VBox>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <VBox binding="">
+                        <grid:CSSGrid class="grid-form" gridTemplateColumns="3fr 1fr" gridGap="0px 0px">
+                            <HBox class="grid-item label-box" alignItems="Center">
+                                <Label design="Bold" class="sapUiSmallMarginEnd" text="Step 1: " />
+                                <Label design="Bold" class="sapUiSmallMarginEnd" text="Marital Status" />
+                            </HBox>
+                            <HBox class="grid-item contents-box" alignItems="Center">
+                                 <Select>
+                                    <core:Item key="GR" text="Single or Married Filing Separately" />
+                                    <core:Item key="MX" text="Mexico" />
+                                    <core:Item key="NO" text="Norway" />
+                                    <core:Item key="NZ" text="New Zealand" />
+                                    <core:Item key="NL" text="Netherlands" />
+                                </Select>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                <VBox>
+                                    <HBox>
+                                        <Label class="textRed sapUiSmallMarginEnd" text="* Complete steps 2-4  ONLY if they apply to you; otherwise, skip to step5." />
+                                        <Link class="textRed sapUiSmallMarginEnd"  text="Click HERE" target="_blank" href="http://www.sap.com" />
+                                        <Label text=" for more information on each step, who can claim exemption from  withholding, when to use the online estimator, and privacy." />
+                                    </HBox>
+                                    <Label text="" />
+                                    <Label design="Bold" text="Step 2 : " />
+                                    <Label design="Bold" text="Complete this step if you(1) hold more one job at a time, or(2) are married filling jointly and your spouse also works. The Correct amount of withholding depends on income earned from all of these jobs." />
+                                    <Label design="Bold" text="Do only one of the following." />
+                                    <Label text="" />
+                                     <HBox>
+                                        <Label design="Bold" class="sapUiSmallMarginEnd" text="   a. Use the estimator at " />
+                                        <Link  design="Bold" class="sapUiSmallMarginEnd" text="https://www.irs.gov/W4App" target="_blank" href="https://www.irs.gov/W4App" />
+                                        <Label design="Bold" text="   for the most accurate withholding for this step" />
+                                    </HBox>
+                                    <HBox>
+                                        <Label design="Bold" class="sapUiSmallMarginEnd" text="   b. Use the " />
+                                        <Link  design="Bold" class="sapUiSmallMarginEnd" text="Multiple jobs Worksheet" target="_blank" href="https://www.irs.gov/W4App" />
+                                        <Label design="Bold" text="   and enter the result in step4© below for roughly accurate withholding: OR" />
+                                    </HBox>
+                                    <Label design="Bold"  text="   c. If there are only two jobs total, you may check this box. Do the same on Form W4 for the other job. This option is accurate for jobs with similar pay; otherwise, more tax than necessary may be with held." />
+                                    <Label text="" />
+                                    <Label text="Tip: To be accurate, submit a 2020 Form W-4 for all other jobs, If you (or your spouse) have self-employment income, including as an independent contractor, use the estimator." />
+                                    <Label text="" />
+                                    <Label text="Complete Steps 3-4(b) on Form W-4 for only ONE of these jobs, Leave those steps blank for the other jobs.( Your withholding will be most accurate. If you complete Steps 3-4(b) on te Form W-4 for the highest paying job.)" />
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                               <HBox binding="{/sample}">
+                                    <CheckBox text="Two Jobs Indicator" />
+                                </HBox>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                 <VBox>
+                                    <Label design="Bold" text="Step 3: " />
+                                    <Label design="Bold"  text="If your income will be $200,000 or less($400,000 or less if married filling jointly):" />
+                                    <Label text="" />
+                                        <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr 1fr" width="100%" gridGap="0px 0px">
+                                            <HBox class="grid-item label-box" alignItems="Center">
+                                                <Label design="Bold"  text="Enter the number or qualifying children under the age of 17:" />
+                                            </HBox>
+                                            <HBox class="grid-item contents-box" alignItems="Center">
+                                                <Input value="10" description="X $20000" width="300px" fieldWidth="200px"/> <Input value="0" width="300px" fieldWidth="200px" editable="false"/>
+                                            </HBox>
+                                            <HBox class="grid-item label-box" alignItems="Center">
+                                                <Label design="Bold"  text="Enter the number of other dependets" />
+                                            </HBox>
+                                            <HBox class="grid-item contents-box" alignItems="Center">
+                                                <Input value="10" description="X $500" width="300px" fieldWidth="200px"/> <Input value="0" width="300px" fieldWidth="200px" editable="false"/>
+                                            </HBox>
+                                            <HBox class="grid-item label-box" alignItems="Center">
+                                                <Label design="Bold"  text="Total of the Above Amounts" />
+                                            </HBox>
+                                            <HBox class="grid-item contents-box" alignItems="Center">
+                                                <Input value="0" width="300px" fieldWidth="200px" editable="false"/>
+                                            </HBox>
+                                        </grid:CSSGrid>
+                                 </VBox>
+                            </HBox>
+                            <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <Input value="1" width="200px" fieldWidth="200px" editable="false"/>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                <VBox>
+                                    <Label design="Bold" text="Step 4 : " />                                    
+                                    <Label design="Bold" text="(a) Other Income(note from jobs.) " />
+                                    <Label text=" If you want tax withheld for other Income you expect this year that won’t have withholding, enter the amount of other income here. This may include interest, dividends and retirement income." />
+                                    <Label text="" />
+                                    <Label design="Bold"  text="(b) Deductions." />
+                                     <HBox>
+                                        <Label class="sapUiSmallMarginEnd" text=" If you expect to claim deductions other than the standard deduction and want to reduce your withholding, use the " />
+                                        <Link  class="sapUiSmallMarginEnd" design="Bold" text="Deductions Worksheet" target="_blank" href="https://www.irs.gov/W4App" />
+                                        <Label class="sapUiSmallMarginEnd" design="Bold" text="and enter the result here." />
+                                    </HBox>
+                                    <Label text="" />
+                                    <Label design="Bold"  text="(c) Extra Withholding. Enter any additional tax you want withheld each pay period." />
+                                </VBox>
+                            </HBox>
+                             <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <VBox>
+                                    <HBox>
+                                        <Input value="$" editable="false" width="60px"/><Input value="{ename}" width="200px"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Input value="$" editable="false" width="60px"/><Input value="" width="200px"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Input value="$" editable="false" width="60px"/><Input value="" width="200px"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Select width="100px">
+                                            <core:Item key="GR" text="Single" />
+                                            <core:Item key="MX" text="Mexico" />
+                                            <core:Item key="NO" text="Norway" />
+                                            <core:Item key="NZ" text="New Zealand" />
+                                            <core:Item key="NL" text="Netherlands" />
+                                        </Select>
+                                        <CheckBox class="textRed" text="IRS mandates" />
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                            <HBox class="grid-item label-box-noheight" alignItems="Center">
+                                <Label text="" />
+                                <VBox>
+                                    <Label design="Bold"  text="Under penalties of perjury, I declare that I have examined this certificate and, to the best of my knowledge and belief, it is true, correct and complete." />
+                                    <Label design="Bold"  text="I understand that by entering my password, I have legally signed this form." />
+                                </VBox>
+                            </HBox>
+                             <HBox class="grid-item contents-box-noheight" alignItems="Center">
+                                <Input type="Password" placeholder="Enter Your MyHMMA Password" width="260px" fieldWidth="260px" editable="true"/>
+                            </HBox>
+                           
+                        </grid:CSSGrid>
+                    </VBox>
+                </content>
+            </Panel>
+            
+        </content>
+        <buttons>
+            <Button text="{i18n>cancel}" press=".onPressCloseDialog" icon="sap-icon://cancel"/>
+            <Button text="{i18n>save}" press=".onPressCloseDialog"  icon="sap-icon://save"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

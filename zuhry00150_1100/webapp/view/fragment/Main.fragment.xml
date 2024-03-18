@@ -1,0 +1,92 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <!-- <Panel headerText="BENEFIT OVERVIEW" class="sapUiSmallMarginTop">
+        <content>
+                <IconTabBar>
+                    <items>
+                        <IconTabFilter text="Health" key="Health"   >
+                             
+                        </IconTabFilter>
+                        <IconTabFilter text="Insurance" key="Insurance">
+                            <Text text="Attachments go here ..." />
+                        </IconTabFilter>
+                        <IconTabFilter text="Saving" key="Saving">
+                            <Text text="Notes go here ..." />
+                        </IconTabFilter>
+                    </items>
+                    <content>
+                        <VBox binding="{/sample}">
+                            <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                                <table:columns>
+                                    <table:Column width="70%" filterProperty="Relation" sortProperty="Relation">
+                                        <table:label>
+                                            <Label text="HMMA Links" width="100%" textAlign="Center" />
+                                        </table:label>
+                                        <table:template>
+                                            <Link text="{Title}" width="100%" textAlign="Left" target="_blank" href="http://www.sap.com" />
+                                        </table:template>
+                                    </table:Column>
+                                </table:columns>
+                            </table:Table>
+                        </VBox>
+                    </content>
+            </IconTabBar>
+        </content>
+    </Panel> -->
+
+    <TabContainer id="myTabContainer"
+					showAddNewButton="false"
+					class="sapUiResponsiveContentPadding sapUiResponsivePadding--header sapUiBodyCBO" >
+		<items >
+			<TabContainerItem name="HEALTH">
+				<content>
+                        <VBox binding="{/main}">
+                            <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{et_zess_emp_benefit_data}">
+                                <table:columns>
+                                     <table:Column width="30%" filterProperty="Idx" sortProperty="Idx">
+                                        <table:label>
+                                            <Label text="{bplan}" width="100%" textAlign="Center" />
+                                        </table:label>
+                                        <table:template>
+                                            <Text text="BCBS of Alabama" width="100%" textAlign="Center" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column width="70%" filterProperty="Relation" sortProperty="Relation">
+                                        <table:label>
+                                            <Label text="Details" width="100%" textAlign="Center" />
+                                        </table:label>
+                                        <table:template>
+                                            <Link text="{eecost}" width="100%" textAlign="Left" target="_blank" href="http://www.sap.com" />
+                                        </table:template>
+                                    </table:Column>
+                                </table:columns>
+                            </table:Table>
+                        </VBox>
+                    </content>
+			</TabContainerItem>
+            <TabContainerItem name="INSURANCE">
+				<content>
+					<Label text="First Name:"/>
+					<Input value="{empFirstName}"/>
+					<Label text="Last Name:"/>
+					<Input value="{empLastName}"/>
+					<Label text="Salary:"/>
+					<Input value="{salary}" description="EUR"/>
+				</content>
+			</TabContainerItem>
+            <TabContainerItem name="Savings">
+				<content>
+					<Label text="First Name111111111111:"/>
+					<Input value="{empFirstName}"/>
+					<Label text="Last Name:"/>
+					<Input value="{empLastName}"/>
+					<Label text="Salary:"/>
+					<Input value="{salary}" description="EUR"/>
+				</content>
+			</TabContainerItem>
+		</items>
+	</TabContainer>
+    
+</core:FragmentDefinition>

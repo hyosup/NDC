@@ -1,0 +1,48 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+   
+        <Panel headerText="Pay Statement" class="sapUiSmallMarginTop">
+        <content>
+            <VBox>
+                <grid:CSSGrid class="grid-form" gridTemplateColumns="1fr " gridGap="1px 0px">
+                    <HBox class="grid-item contents-box" alignItems="Center">
+                        <Text text="Pay Date : " />
+                        <DatePicker dateValue="{/Begda}" displayFormat="dd-MM-yyyy" class="sapUiTinyMarginBegin" />
+                        <!-- <Select>
+                            <core:Item key="GR" text="Greece" />
+                            <core:Item key="MX" text="Mexico" />
+                            <core:Item key="NO" text="Norway" />
+                            <core:Item key="NZ" text="New Zealand" />
+                            <core:Item key="NL" text="Netherlands" />
+                        </Select>
+                        <Select>
+                            <core:Item key="GR" text="Greece" />
+                            <core:Item key="MX" text="Mexico" />
+                            <core:Item key="NO" text="Norway" />
+                            <core:Item key="NZ" text="New Zealand" />
+                            <core:Item key="NL" text="Netherlands" />
+                        </Select>
+                        <Select>
+                            <core:Item key="GR" text="Greece" />
+                            <core:Item key="MX" text="Mexico" />
+                            <core:Item key="NO" text="Norway" />
+                            <core:Item key="NZ" text="New Zealand" />
+                            <core:Item key="NL" text="Netherlands" />
+                        </Select> -->
+                         <!-- <Button text="[SAPUI5] Pay Summary " icon="sap-icon://sum" press=".onPressWindow" /> -->
+                         <!-- <Button text="[SAPUI5 + HTML]Pay Detail"  icon="sap-icon://detail-view" press=".onPressPaySummaryHTML" /> -->
+                         <Button text="Pay Summary " icon="sap-icon://sum" press=".onPressPaySummary" />
+                         <Button text="Pay Detail"  icon="sap-icon://detail-view" press=".onPressPaySummary" />
+                    </HBox>
+                </grid:CSSGrid>
+                 <Label text="" />
+                <HBox class="">
+                    <Label text="You may print your statement now by selecting the desired date above, click display and then print." />
+                </HBox>
+              
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

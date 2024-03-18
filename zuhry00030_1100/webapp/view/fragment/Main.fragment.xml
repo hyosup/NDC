@@ -1,0 +1,70 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="ANNUAL WAGE HISTORY" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/main}">
+                 <!-- <Button text="Insert RFC" press="handleDetailsPress"/> -->
+                <!-- <HBox class="sapUiLargeMarginTop">
+                    <Label text="W2 History" />
+                </HBox> -->
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                    <table:columns>
+                        <table:Column width="15%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Date/Time" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                 <Text text="{trfar}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Year" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{trfgb}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" 
+                            headerSpan="2"
+                            sortProperty="Relation">
+                           	<table:multiLabels>
+                                <Label text="Tax Company" textAlign="Center" width="100%"/>
+                            </table:multiLabels>
+                            <table:template>
+                                <Text text="{ansal}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Tax Company" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{txcmp_txt}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="30%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Form" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{resty_txt}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Generation Date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                 <Text text="{bet01}" width="100%" textAlign="Center" />
+                                 
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>
