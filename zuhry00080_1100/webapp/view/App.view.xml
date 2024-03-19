@@ -23,7 +23,7 @@
     <Shell>
         <App class="myAppDemoWT">
             <pages>
-                <Page title="{i18n>homePageTitle}">
+                <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" >
                     <!-- <Text text="userModel info : {userModel>/e_employee_number}"></Text>
                     <Text text="user info : {userapi>/fullName}"></Text>
                     <Text text='device info : {device>/system/desktop}' /> -->
