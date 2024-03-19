@@ -1,13 +1,27 @@
-/**
- * eslint-disable @sap/ui5-jsdocs/no-jsdoc
- */
-
+/********************************************************************************************************
+* Task ID       : [zuhry00170_1100]
+* Task Desc     : [FML PERSONAL CERT FORM]
+* App ID        : com.hmmausa.myhmma.mypay.zuhry001701100
+* App Desc      : [FML PERSONAL CERT FORM]
+* Developer     : GICSHR28
+* Date          : 2024.04.15
+* Type          : Free Style
+********************************************************************************************************
+* Change History
+*&_______________________________________________________________________________________________________
+* Ver. No       Change Date        Developer               Requestor           Description of Change
+*&_______________________________________________________________________________________________________
+*      1          2024.04.15        SHS                     HJ.JANG                     Init   
+**********************************************************************************************************
+*/
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
+		"sap/ui/model/json/JSONModel",
+		"sap/ui/model/odata/v2/ODataModel",
         "com/hmmausa/myhmma/mypay/zuhry001701100/model/models"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, JSONModel,ODataModel, models) {
         "use strict";
 
         return UIComponent.extend("com.hmmausa.myhmma.mypay.zuhry001701100.Component", {
@@ -29,6 +43,27 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+
+                // set App model
+                var sUrl = '/sap/opu/odata/SAP/ZGWHRY00170_1100_SRV/';			
+                sap.ui.getCore().setModel(
+                    new ODataModel(sUrl, {
+                        json:true, 
+                        useBatch:false, 
+                        defaultUpdateMethod:'Put'
+                        // ,metadataUrlParams: { 'sap-client': '410' }
+                    }
+                ), 'ODAT');
+
+                sap.ui.getCore().setModel(new sap.ui.model.json.JSONModel({}), 'ROOT');
+               
+                var userModel = new sap.ui.model.json.JSONModel({
+                    syUname: '00101137'
+                });
+                 this.setModel(userModel, "userModel");
+
+
             }
         });
     }

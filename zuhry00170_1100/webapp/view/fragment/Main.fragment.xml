@@ -4,10 +4,10 @@
     xmlns:core="sap.ui.core">
     <Panel headerText="Existing FML Requests" class="sapUiSmallMarginTop">
         <content>
-            <VBox binding="{/sample}">
+            <VBox binding="{/main}">
                  <Label text="Please review existing FML Requests and their associated status below." width="100%" textAlign="Start" />
                  <Label text="" width="100%" textAlign="Start" />
-                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                <table:Table selectionMode="None" visibleRowCount="20" rows="{ct_data}">
                     <table:columns>
                         <table:Column width="20%" filterProperty="Idx" sortProperty="Idx">
                             <table:label>
@@ -22,7 +22,7 @@
                                 <Label text="Check#" width="100%" textAlign="Center" />
                             </table:label>
                             <table:template>
-                                <Text text="{CheckVal}" width="100%" textAlign="Center" />
+                                <Text text="{ename}" width="100%" textAlign="Center" />
                             </table:template>
                         </table:Column>
                         <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">

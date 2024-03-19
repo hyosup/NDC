@@ -4,10 +4,10 @@
     xmlns:core="sap.ui.core">
     <Panel headerText="401K WORKSHOP SIGNUP" class="sapUiSmallMarginTop">
         <content>
-            <VBox binding="{/sample}">
+            <VBox binding="{/main}">
                  <Label text='Please click "Sign Up" for each event you are interested in attending and then complete the requested information. Please note that registration is not required to attend these events.' width="100%" textAlign="Start" />
                  <Label text="" width="100%" textAlign="Start" />
-                <table:Table title=" 401(K) workshop ( Spouse is eligible to attend )" selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                <table:Table title=" 401(K) workshop ( Spouse is eligible to attend )" selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{et_data}">
                     <table:columns>
                         <table:Column width="15%" filterProperty="Idx" sortProperty="Idx">
                             <table:label>
@@ -22,7 +22,7 @@
                                 <Label text="Team Member Number" width="100%" textAlign="Center" />
                             </table:label>
                             <table:template>
-                                <Text text="{CheckVal}" width="100%" textAlign="Center" />
+                                <Text text="{event_id}" width="100%" textAlign="Center" />
                             </table:template>
                         </table:Column>
                         <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
@@ -30,7 +30,7 @@
                                 <Label text="Event Subject" width="100%" textAlign="Center" />
                             </table:label>
                             <table:template>
-                                <Text text="{TypeVal}" width="100%" textAlign="Center" />
+                                <Text text="{event_subject}" width="100%" textAlign="Center" />
                             </table:template>
                         </table:Column>
                         <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">

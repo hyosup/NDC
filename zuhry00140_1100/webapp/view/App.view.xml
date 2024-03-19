@@ -1,15 +1,19 @@
-<!-- <mvc:View controllerName="com.hmmausa.myhmma.mypay.zuhry001401100.controller.App"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
-</mvc:View> -->
-
-
-
-
-
+<!-- /********************************************************************************************************
+* Task ID       : [zuhry00140_1100]
+* Task Desc     : [LINKS]
+* App ID        : com.hmmausa.myhmma.mypay.zuhry001401100
+* App Desc      : [LINKS]
+* Developer     : GICSHR28
+* Date          : 2024.04.15
+* Type          : Free Style
+********************************************************************************************************
+* Change History
+*&_______________________________________________________________________________________________________
+* Ver. No       Change Date        Developer               Requestor           Description of Change
+*&_______________________________________________________________________________________________________
+*      1          2024.04.15        SHS                     HJ.JANG                     Init   
+**********************************************************************************************************
+*/ -->
 <mvc:View controllerName="com.hmmausa.myhmma.mypay.zuhry001401100.controller.App"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"

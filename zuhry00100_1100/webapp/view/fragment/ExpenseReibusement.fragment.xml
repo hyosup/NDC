@@ -6,7 +6,9 @@
         <content>
             <VBox binding="{/sample}">
                 <Label text='Period' labelFor="DP10"/>
-				<DatePicker width="300px"
+				<DatePicker 
+                    id="idDate"
+                    width="300px"
 					value="{
 						'path': '/valueDP10',
 						'type': 'sap.ui.model.type.Date',
@@ -21,7 +23,7 @@
                 <!-- <HBox class="sapUiLargeMarginTop">
                     <Label text="W2 History" />
                 </HBox> -->
-                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{list}">
+                <table:Table selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{et_reimbursement}">
                     <table:columns>
                          <table:Column width="10%" filterProperty="Relation" 
                             headerSpan="3"

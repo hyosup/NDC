@@ -15,6 +15,10 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: https://ERPPOC.HEC.HMCKMC.CO.KR:44310
+            client: '410'
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
