@@ -37,7 +37,8 @@
                         <VBox >
                             <VBox class="label-box" >
                                 <Title titleStyle="H4" >
-                                    <Link text="Benefit Overview" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Benefit Overview" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Benefit Overview" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00150_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="The Benefit OVerview will display all of your current Benefit elections." wrapping="true" />
@@ -86,7 +87,8 @@
                                                         </VBox>
                                                     </HBox>
                                                     <HBox>
-                                                        <Link text="FML-IFML Online Submission Form" wrapping="true" class="sapUiSmallMarginEnd" />
+                                                        <!-- <Link text="FML-IFML Online Submission Form" wrapping="true" class="sapUiSmallMarginEnd" /> -->
+                                                        <Link text="FML-IFML Online Submission Form" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00170_1100/index.html" class="sapUiSmallMarginEnd" />
                                                     </HBox>
                                                     <HBox>
                                                         <VBox>
@@ -120,9 +122,10 @@
                                                             <Label text="- Customer Service 800-835-5098" wrapping="true" />
                                                         </VBox>
                                                     </HBox>
-                                                    <Link design="Bold" text="Budget Calendar" wrapping="true" />
-                                                    <Link design="Bold" text="Personal Finance 101" wrapping="true" />
-                                                    <Link design="Bold" text="401K Workshop Signup" wrapping="true" />
+                                                    <Link text="Budget Calendar" wrapping="true" />
+                                                    <Link text="Personal Finance 101" wrapping="true" />
+                                                    <!-- <Link design="Bold" text="401K Workshop Signup"  /> -->
+                                                    <Link  text="401K Workshop Signup" wrapping="true" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00180_1100/index.html" class="sapUiSmallMarginEnd" />
                                                 </VBox>
                                             </f:content>
                                         </f:Card>
@@ -166,7 +169,8 @@
                         <VBox >
                             <VBox class="label-box">
                                     <Title titleStyle="H4">
-                                        <Link text="H List" target="_blank" href="http://www.sap.com" />
+                                        <!-- <Link text="H List" target="_blank" href="http://www.sap.com" /> -->
+                                        <Link text="H List" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00130_1100/index.html" />
                                     </Title>
                                 </VBox>
                             <Label class="sapUiSmallMargin" text="The H List will display Companies that offer discounts to Hyundai Team Members." wrapping="true" />
@@ -197,7 +201,8 @@
                         <VBox>
                             <VBox class="label-box">
                                 <Title titleStyle="H4">
-                                    <Link text="Link" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Link" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Link" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00140_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Helpful Links to external sites, such as EAP,Fidelity. BlueCross?blueShiedl, EyeMed and many others." wrapping="true" />
@@ -212,7 +217,8 @@
                         <VBox>
                             <VBox class="label-box">
                                 <Title titleStyle="H4" >
-                                    <Link text="Total Compensation" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Total Compensation" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Total Compensation" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00160_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Total Compensation Will display an overview of pay and benefits received annually." wrapping="true" />
@@ -228,7 +234,8 @@
                         <VBox >
                             <VBox class=" label-box">
                                 <Title titleStyle="H4">
-                                    <Link text="Tutorial Assistance Program" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Tutorial Assistance Program" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Tutorial Assistance Program" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00190_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Proviedes easy access to HMMA's Tuition Assistance information and forms." wrapping="true" />

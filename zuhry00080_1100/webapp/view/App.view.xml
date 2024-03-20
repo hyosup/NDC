@@ -23,7 +23,26 @@
     <Shell>
         <App class="myAppDemoWT">
             <pages>
-                <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" >
+                <!-- <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" > -->
+                <Page>
+                     <!-- <customHeader>
+                        <Bar>
+                            <contentLeft>
+                                <Breadcrumbs currentLocationText="Cafe Deduction - Program Status" separatorStyle="DoubleGreaterThan">
+                                    <Link text="My Pay" href="/sap/bc/ui5_ui5/sap/zuhry00010_1100/index.html"  />
+                                </Breadcrumbs>
+                            </contentLeft>
+                        </Bar>
+                    </customHeader> -->
+                    <headerContent>
+                        <Bar>
+                            <contentLeft>
+                                <Link text="My Pay" href="/sap/bc/ui5_ui5/sap/zuhry00010_1100/index.html"  />
+                                <Label text=">>"   />
+                                <Label text="Cafe Deduction - Program Status" />
+                            </contentLeft>
+                        </Bar>
+                    </headerContent>
                     <!-- <Text text="userModel info : {userModel>/e_employee_number}"></Text>
                     <Text text="user info : {userapi>/fullName}"></Text>
                     <Text text='device info : {device>/system/desktop}' /> -->

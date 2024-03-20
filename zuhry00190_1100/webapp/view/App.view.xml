@@ -1,0 +1,45 @@
+<!--
+/********************************************************************************************************
+* Task ID       : [zuhry00190_1100]
+* Task Desc     : [Tuition Assitance Program]
+* App ID        : com.hmmausa.myhmma.mypay.zuhry001901100
+* App Desc      : [Tuition Assitance Program]
+* Developer     : GICSHR28
+* Date          : 2024.04.15
+* Type          : Free Style
+********************************************************************************************************
+* Change History
+*&_______________________________________________________________________________________________________
+* Ver. No       Change Date        Developer               Requestor           Description of Change
+*&_______________________________________________________________________________________________________
+*      1          2024.04.15        SHS                     HJ.JANG                     Init   
+**********************************************************************************************************
+*/
+-->
+<mvc:View controllerName="com.hmmausa.myhmma.mypay.zuhry001901100.controller.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <!-- <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" > -->
+                <Page>
+                    <headerContent>
+                        <Bar>
+                            <contentLeft>
+                                <Link text="My Benefit" href="/sap/bc/ui5_ui5/sap/zuhry00120_1100/index.html"  />
+                                <Label text=">>"   />
+                                <Label text="Tuition Assitance Program" />
+                            </contentLeft>
+                        </Bar>
+                    </headerContent>
+                    <content>
+                        <core:Fragment fragmentName="com.hmmausa.myhmma.mypay.zuhry001901100.view.fragment.Main" type="XML" />
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
+

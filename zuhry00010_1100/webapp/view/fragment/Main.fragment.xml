@@ -28,10 +28,11 @@
                         <grid:ResponsiveColumnItemLayoutData columns="6" rows="4" />
                     </f:layoutData>
                     <f:content>
-                        <VBox >
+                        <VBox class="fullwith">
                             <VBox class="label-box" >
                                 <Title titleStyle="H4" >
-                                    <Link text="Pay Statement" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Pay Statement" target="_blank" href="/sap/bc/ui5_ui5/sap/zuhry00020_1100/index.html" /> -->
+                                    <Link text="Pay Statement" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00020_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Access to your remuneration statement allows you to view your current pay statement and pay history." wrapping="true" />
@@ -49,7 +50,7 @@
                             </Title>
                             <Label text="Access to your bank information will allow you to review or request change to your direct deposit information." wrapping="true" />
                         </VBox> -->
-                        <VBox >
+                        <VBox class="fullwith">
                             <VBox class="label-box" >
                                 <Title titleStyle="H4" >
                                     <Link text="Bank Information" target="_blank" href="http://www.sap.com" />
@@ -73,7 +74,8 @@
                         <VBox class="fullwith">
                             <VBox class="label-box" >
                                 <Title titleStyle="H4" >
-                                    <Link text="Annual Wage History" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Annual Wage History" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Annual Wage History" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00030_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Access to your Annual Wage History will allow you to review your Annual Wage History data." wrapping="true" />
@@ -94,7 +96,8 @@
                         <VBox >
                             <VBox class="label-box" >
                                 <Title titleStyle="H4" >
-                                    <Link text="Expense Reimbursement" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="Expense Reimbursement" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="Expense Reimbursement" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00100_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Access to review reimbursements to you via Finance department. Payments may be searched by month and year." wrapping="true" />
@@ -115,7 +118,8 @@
                         <VBox class="fullwith">
                             <VBox class="label-box"   >
                                 <Title titleStyle="H4" >
-                                    <Link text="W2 Statement" target="_blank" href="http://www.sap.com" />
+                                    <!-- <Link text="W2 Statement" target="_blank" href="http://www.sap.com" /> -->
+                                    <Link text="W2 Statement" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00060_1100/index.html" />
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Access your current W2 and up to two historical W2 statements." wrapping="true" />
@@ -139,16 +143,19 @@
                         </VBox> -->
                         <VBox class="fullwith">
                             <VBox class="label-box"   >
-                                <Title titleStyle="H4" >
-                                    <Link text="Taxes" target="_blank" href="http://www.sap.com" />
+                                <Title titleStyle="H4" text="Taxes" >
+                                    <!-- <Link text="Taxes" target="_blank" href="http://www.sap.com" /> -->
+                                    <!-- <Label text="Taxes" wrapping="true" /> -->
                                 </Title>
                             </VBox>
                             <Label class="sapUiSmallMargin" text="Access to your Annual Wage History will allow you to review your Annual Wage History data." wrapping="true" />
                              <Title titleStyle="H6">
-                                <Link class="leftMargin" text="- Federal" target="_blank" href="http://www.sap.com" />
+                                <!-- <Link class="leftMargin" text="- Federal" target="_blank" href="http://www.sap.com" /> -->
+                                <Link class="leftMargin" text="- Federal" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00040_1100/index.html" />
                             </Title>
                             <Title titleStyle="H6">
-                                <Link class="leftMargin" text="- State" target="_blank" href="http://www.sap.com" />
+                                <!-- <Link class="leftMargin" text="- State" target="_blank" href="http://www.sap.com" /> -->
+                                <Link class="leftMargin" text="- State" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00050_1100/index.html" />
                             </Title>
                             <!-- <Title class="sapUiSmallMargin" titleStyle="H4">
                                 <Link text="- State" target="_blank" href="http://www.sap.com" />
@@ -174,10 +181,12 @@
                             </VBox>
                             <Label class="" text="" wrapping="true" />
                             <Title titleStyle="H6">
-                                <Link class="leftMargin" text="- Program Status" target="_blank" href="http://www.sap.com" />
+                                <!-- <Link class="leftMargin" text="- Program Status" target="_blank" href="http://www.sap.com" /> -->
+                                <Link class="leftMargin" text="- Program Status" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00080_1100/index.html" />
                             </Title>
                             <Title titleStyle="H6">
-                                <Link class="leftMargin" text="- Meal Transactions" target="_blank" href="http://www.sap.com" />
+                                <!-- <Link class="leftMargin" text="- Meal Transactions" target="_blank" href="http://www.sap.com" /> -->
+                                <Link class="leftMargin" text="- Meal Transactions" target="_self" href="/sap/bc/ui5_ui5/sap/zuhry00090_1100/index.html" />
                             </Title>
                         </VBox>
                     </f:content>

@@ -1,0 +1,73 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core">
+    <Panel headerText="Tuition Assitance Program" class="sapUiSmallMarginTop">
+        <content>
+            <VBox binding="{/main}">
+                 <Label text='Please click "Sign Up" for each event you are interested in attending and then complete the requested information. Please note that registration is not required to attend these events.' width="100%"  />
+                 <Label text="" width="100%"  />
+                <table:Table title=" 401(K) workshop ( Spouse is eligible to attend )" selectionMode="None" visibleRowCount="{listInfo/rowCount}" rows="{et_data}">
+                    <table:columns>
+                        <table:Column width="15%" filterProperty="Idx" sortProperty="Idx">
+                            <table:label>
+                                <Label text="Sign Up" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                 <Button text="Sign Up"  class="sapUiSmallMargin" icon="sap-icon://edit"  press=".onSign" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Team Member Number" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{event_id}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="20%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Event Subject" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{event_subject}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Event Date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="Event Time" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'HH:mm' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="SignUp Start Date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="10%" filterProperty="Relation" sortProperty="Relation">
+                            <table:label>
+                                <Label text="SignUp End Date" width="100%" textAlign="Center" />
+                            </table:label>
+                            <table:template>
+                                <Text text="{ path: 'Datum', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'MM/dd/yyyy' } }" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+             </VBox>
+        </content>
+    </Panel>
+</core:FragmentDefinition>

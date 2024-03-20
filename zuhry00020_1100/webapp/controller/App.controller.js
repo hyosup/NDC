@@ -40,6 +40,10 @@ sap.ui.define(
 
           },
 
+          onMyPayPress: function() {
+            sap.m.URLHelper.redirect("/sap/bc/ui5_ui5/sap/zuhry00010_1100/index.html",true);
+          },
+
           onSearch: function () {
             const oView = this.getView();
             const oContext = oView.getBindingContext();

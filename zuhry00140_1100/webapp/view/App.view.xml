@@ -21,7 +21,17 @@
     <Shell>
         <App class="myAppDemoWT">
             <pages>
-                <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" >
+                <!-- <Page title="{i18n>homePageTitle}"	 titleAlignment="Start" > -->
+                <Page>
+                    <headerContent>
+                        <Bar>
+                            <contentLeft>
+                                <Link text="My Benefit" href="/sap/bc/ui5_ui5/sap/zuhry00120_1100/index.html"  />
+                                <Label text=">>"   />
+                                <Label text="Links" />
+                            </contentLeft>
+                        </Bar>
+                    </headerContent>
                     <content>
                         <core:Fragment fragmentName="com.hmmausa.myhmma.mypay.zuhry001401100.view.fragment.Main" type="XML" />
                     </content>
